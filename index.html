@@ -6,33 +6,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Library</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js"></script>
 </head>
 <body>
     <header>
         <h1>myLibrary</h1>
     </header>
     <main>
-        <button class="add-a-book">+ Add Book</button>
-        <div class="display">
-            <div class="card">
-                <p>"Moby-Dick"</p>
-                <p>Herman Melville</p>
-                <p>378 Pages</p>
-                <button class="read">Read</button>
-                <button class="remove-book">Remove</button>
-            </div>
-            <!-- format for book cards -->
-<!--             
-            <div class="card">
-                <p>"Moby-Dick"</p>
-                <p>Herman Melville</p>
-                <p>378 Pages</p>
-                <button class="read">Read</button>
-                <button class="remove-book">Remove</button>
-            </div>
-             -->
+        <button class="add-a-book" onclick="addBookForm()">+ Add Book</button>
+        <div class="display" id="display"></div>
+
+        <div id="modal-bg" class="inactive"></div>
+        <div id="add-book-popup" class="inactive">
+            <p>Add a Book</p>
+            <form action="javascript:void(0);" onsubmit="addBook()" id="book-form">
+                <div class="input-group">
+                    <label for="title">Title</label>
+                    <input type="text" id="title" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="author">Author</label>
+                    <input type="text" id="author" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="pages">Pages</label>
+                    <input type="number" id="pages" required>
+                </div>
+
+                <div class="input-group" id="read-it-input-group">
+                    <label for="read">Have you read it?</label>
+                    <input type="checkbox" id="read">
+                </div>
+
+                <button>Add Book</button>
+            </form>
         </div>
+
     </main>
+    <script src="script.js"></script>
 </body>
 </html>
