@@ -13,11 +13,14 @@ let myLibrary = [
     },
 ];
 
-function Book(title, author, pages, read) {
-    this.title = title; //string, title of book
-    this.author = author; //string, author of book
-    this.pages = pages; //number, number of pages
-    this.read = read; //bool, have we read the book
+class Book {
+    constructor (title, author, pages, read) {
+        this.title = title; //string, title of book
+        this.author = author; //string, author of book
+        this.pages = pages; //number, number of pages
+        this.read = read; //bool, have we read the book
+    }
+
 }
 
 //add and remove books
